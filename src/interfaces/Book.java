@@ -1,6 +1,6 @@
 package interfaces;
 
-public class Book implements Printable{
+public class Book implements Printable, Recycleble{
 
     private String title;
     private String author;
@@ -17,5 +17,17 @@ public class Book implements Printable{
 
     public void  bookClassMethod() {
         System.out.println("Method from class book");
+    }
+
+
+    @Override
+    public void printDefault() {
+        System.out.println("Book overriding default method");
+    }
+
+    @Override
+    public void recycle() {
+        System.out.println("Book recycle method");
+
     }
 }
